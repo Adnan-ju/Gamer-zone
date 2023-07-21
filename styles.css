@@ -30,7 +30,6 @@
 
 .logo-content{
     color: #0B0223;
-font-family: Work Sans;
 font-size: 45px;
 font-weight: 700;
 
@@ -182,20 +181,120 @@ font-weight: 400;
 }
 
 .play-image{
-
-    width: 634.833px;
-height: 650px;
+position: relative;
+width: 634.833px;
+height: auto;
 border-radius: 8px;
 }
 
 .badge{
     width: 318.5px;
 height: 365.083px;
-position: relative;
-bottom: 300px;
-right: 150px;
+position: absolute;
+left:-70px;
+top: 350px;
 }
 
+.game-container{
+    padding: 50px;
+    margin-top: 150px;
+}
+
+.part-1{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: space-around;
+    align-items: center;
+}
+.game img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+.game,.game2{
+width: 300px;
+height: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 5px;
+border: 2px solid transparent;
+border-radius: 50px;
+background: #FFF;
+color: #0B0223;
+font-size: 20px;
+font-weight: 600;
+
+}
+
+.game:hover {
+    border: 3px solid pink;
+    color: pink;
+}
+.game2:hover {
+    border: 3px solid pink;
+    color: pink;
+}
+
+/* footer section  */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0B0223;
+    padding: 50px 0px;
+}
+
+.footer-title img{
+    width: 86.041px;
+    height: 40px;
+    margin-right:10px;
+}
+.footer-title {
+color: white;
+font-size: 45px;
+font-weight: 700;
+}
+
+.services{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.services li{
+    color: white;
+    margin: 10px 30px;
+}
+
+.contact{
+    display: flex;
+    list-style-type: none;
+}
+
+.contact li{
+    margin: 20px 20px;
+}
+.contact i{
+    width: 40px;
+    height: 40px;
+}
+
+.condition{
+    display: flex;
+    list-style: none;
+}
+
+.condition li{
+    margin: 10px 30px;
+    color: rgba(255, 255, 255, 0.60);;
+}
+
+.lastline{
+    color: rgba(255, 255, 255, 0.60);;
+}
 /* mobile responsive  */
 
 @media screen and (max-width:576px) {
@@ -221,6 +320,7 @@ right: 150px;
     .play-container{
         flex-direction: column;
         padding: 20px;
+        height: auto;
 
     }
     .play-title,.play-description{
@@ -228,6 +328,7 @@ right: 150px;
     }
 
     .play-image{
+        position: relative;
         margin-top: 20px;
        text-align: center;
     }
@@ -239,10 +340,44 @@ right: 150px;
     }
     .badge{
     width: 250px;
-    position: relative;
-    bottom: 130px;
-    left: 30px;  
+    position: absolute;
+    left: 40px;
+    top:220px;
     }
     
-    
+    .game-container{
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+    .part-1{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,100px);
+    }
+   
+    .game,.game2{
+        width: 120px;
+        height: 50px;
+        font-size: 8px;
+        font-weight: 400;
+        }
+
+        .services{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-content: center;
+            align-items: center;
+        }
+        .condition{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+            align-items: center;
+        }
 }
